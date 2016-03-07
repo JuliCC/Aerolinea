@@ -1,0 +1,9 @@
+<h1>Informacion del avion</h1>
+
+<h2>Piloto</h2>
+
+<ul>
+	<% @aeroplane.pilots.each do |pilot| %>
+		<li><%=pilot.name %></li>
+	<% end %>
+</ul>

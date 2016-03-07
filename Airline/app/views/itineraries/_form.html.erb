@@ -1,0 +1,27 @@
+<%= form_for itinerary do |f| %>
+
+	<div>
+		<%= f.label :ciudad_salida %>
+		<%= f.text_field :ciudad_salida %>
+	</div>
+
+	<div>
+		<%= f.label :ciudad_destino %>
+		<%= f.text_field :ciudad_destino %>
+	</div>
+
+	<div>
+		<%= f.label :hora_salida %>
+		<%= f.text_field :hora_salida %>
+	</div>
+
+	<div>
+		<%= f.label :hora_llegada %>
+		<%= f.text_field :hora_llegada %>
+	</div>
+
+	<div>
+		<%= f.submit "Save" %>	
+	</div>
+
+<% end %>

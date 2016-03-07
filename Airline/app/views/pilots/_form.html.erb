@@ -1,0 +1,17 @@
+<%= form_for pilot do |f| %>
+
+	<div>
+		<%= f.label :nombre %>
+		<%= f.text_field :nombre %>
+	</div>
+
+	<div>
+		<%= f.label :identificacion %>
+		<%= f.text_field :identificacion %>
+	</div>
+
+	<div>
+		<%= f.submit "Save" %>	
+	</div>
+
+<% end %>

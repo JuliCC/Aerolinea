@@ -1,0 +1,25 @@
+<h1>Lista de rutas</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Ciudad de salida</th>
+			<th>Ciudad de destino</th>
+			<th>Hora de salida</th>
+			<th>Hora de llegada</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @itineraries.each do |itinerary| %>
+			<tr>
+				<td><%= itinerary.ciudad_salida %></td>
+				<td><%= itinerary.ciudad_destino %></td>
+				<td><%= itinerary.hora_salida %></td>
+				<td><%= itinerary.hora_llegada %></td>
+				<td><%= link_to "Editar ruta", edit_itinerary_path(itinerary) %></td>
+				<td><%= link_to "Mostar detalles", show_itinerary_path(itinerary) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+

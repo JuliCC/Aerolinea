@@ -1,0 +1,14 @@
+<h1>Lista de aviones</h1>
+
+<%= link_to "Agregar avion", new_aeroplane_path %>
+ 
+<ol>
+	<% @aeroplanes.each do |aeroplane| %>
+		<li>
+			<%= aeroplane.codigo %>
+			<%= link_to "Editar", edit_aeroplane_path(aeroplane) %>
+			<%= link_to "Eliminar", aeroplane_path(aeroplane), method: :delete, data: {confirm: "Estas seguro?"} %>
+		</li>
+
+	<% end %>
+</ol>
