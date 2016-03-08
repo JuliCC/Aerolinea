@@ -1,0 +1,16 @@
+<h1>Detalles de ruta</h1>
+
+<h3>Ciudad origen</h3>
+<%= @itinerary.ciudad_salida %>
+
+<h3>Codigo del avion</h3>
+
+<ul>
+
+	<% @itinerary.aeroplanes.each do |aeroplane| %>
+		<li><%=aeroplane.codigo %></li>
+	<% end %>
+</ul>
+
+
+

@@ -21,6 +21,11 @@
 	</div>
 
 	<div>
+	<%= f.label :aeroplanes %>
+	<%= f.collection_check_boxes :aeroplane_ids, Aeroplane.all, :id, :codigo %>
+	</div>
+
+	<div>
 		<%= f.submit "Save" %>	
 	</div>
 

@@ -1,9 +1,9 @@
 class Aeroplane < ActiveRecord::Base
 	has_many :schedules
-	has_many :itineraries, through: :schedule
+	has_many :itineraries, through: :schedules
 
-	has_many :schedules
-	has_many :pilots, through: :schedule
+	
+	has_many :pilots, through: :schedules
 
 
 end

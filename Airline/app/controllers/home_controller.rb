@@ -3,4 +3,5 @@ class HomeController < ApplicationController
 		@aeroplanes = Aeroplane.all
 		@itineraries = Itinerary.all
 		@pilots = Pilots.all
+	end
 end

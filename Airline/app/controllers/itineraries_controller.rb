@@ -35,6 +35,6 @@ class ItinerariesController < ApplicationController
     end
 
   def itinerary_params
-        params.require(:itinerary).permit(:ciudad_salida, :ciudad_llegada, :hora_salida, :hora_llegada)
+        params.require(:itinerary).permit(:ciudad_salida, :ciudad_destino, :hora_salida, :hora_llegada, {aeroplane_ids: []})
     end
 end

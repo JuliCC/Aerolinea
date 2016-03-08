@@ -1,4 +1,4 @@
 class Pilot < ActiveRecord::Base
-	has_many :schedule
-	has_many :aeroplanes, through: :schedule
+	has_many :schedules
+	has_many :aeroplanes, through: :schedules
 end

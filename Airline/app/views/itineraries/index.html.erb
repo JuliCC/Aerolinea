@@ -1,25 +1,16 @@
-<h1>Lista de rutas</h1>
+<h1>Lista de rutas desde la ciudad origen</h1>
 
-<table>
-	<thead>
-		<tr>
-			<th>Ciudad de salida</th>
-			<th>Ciudad de destino</th>
-			<th>Hora de salida</th>
-			<th>Hora de llegada</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @itineraries.each do |itinerary| %>
-			<tr>
-				<td><%= itinerary.ciudad_salida %></td>
-				<td><%= itinerary.ciudad_destino %></td>
-				<td><%= itinerary.hora_salida %></td>
-				<td><%= itinerary.hora_llegada %></td>
-				<td><%= link_to "Editar ruta", edit_itinerary_path(itinerary) %></td>
-				<td><%= link_to "Mostar detalles", show_itinerary_path(itinerary) %></td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+<%= link_to "Agregar rutas", new_itinerary_path %>
+ 
+<ol>
+	<% @itineraries.each do |itinerary| %>
+		<li>
+			<%= itinerary.ciudad_salida %>
+			<%= link_to "Editar", edit_itinerary_path(itinerary) %>
+			<%= link_to "Eliminar", itinerary_path(itinerary), method: :delete, data: {confirm: "Estas seguro?"} %>
+			<%= link_to "Detalles", itinerary_path(itinerary) %>
+		</li>
+
+	<% end %>
+</ol>
 
