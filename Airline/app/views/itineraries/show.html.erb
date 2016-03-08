@@ -1,16 +1,29 @@
 <h1>Detalles de ruta</h1>
 
-<h3>Ciudad origen</h3>
-<%= @itinerary.ciudad_salida %>
+<ol>
+	<li>Ciudad origen</li>
+	<%= @itinerary.ciudad_salida %>
 
-<h3>Codigo del avion</h3>
+	<li>Ciudad destino</li>
+	<%= @itinerary.ciudad_destino %>
+
+	<li>Hora salida</li>
+	<%= @itinerary.hora_salida %>
+
+	<li>Hora llegada</li>
+	<%= @itinerary.hora_llegada %>
+</ol>
 
 <ul>
-
+	<li>Codigo del avion</li>
 	<% @itinerary.aeroplanes.each do |aeroplane| %>
-		<li><%=aeroplane.codigo %></li>
+	<li><%=aeroplane.codigo %></li>
+	<% end %>
+	
+	<li>Nombre del piloto</li>
+	<% @itinerary.pilots.each do |pilot| %>
+	<li><%=pilot.nombre %></li>
 	<% end %>
 </ul>
-
 
 

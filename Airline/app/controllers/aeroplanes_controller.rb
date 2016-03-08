@@ -36,7 +36,11 @@ class AeroplanesController < ApplicationController
     end
 
     def aeroplane_params
-        params.require(:aeroplane).permit(:codigo)
+        params.require(:aeroplane).permit(:codigo, {pilot_ids: []})
     end
 
 end
+
+ def itinerary_params
+        params.require(:itinerary).permit(:ciudad_salida, :ciudad_destino, :hora_salida, :hora_llegada, {pilot_ids: []})
+    end

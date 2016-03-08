@@ -1,7 +1,7 @@
 class PilotsController < ApplicationController
 
 	def index
-		@Pilots = Pilot.all
+		@pilots = Pilot.all
 	end
 
 	def new
@@ -36,6 +36,6 @@ class PilotsController < ApplicationController
     end
 
   def pilot_params
-    params.require(:pilot).permit(:nombre, :identificacion, {pilot_ids: []})
+    params.require(:pilot).permit(:nombre, :identificacion, {aeroplane_ids: []})
     end
 end

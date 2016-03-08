@@ -5,13 +5,11 @@
 <ol>
 	<% @pilots.each do |pilot| %>
 		<li>
-			<%= pilot.name %>
-			<%=pilot.identificacion %>
+			<%= pilot.nombre %>
 			<%= link_to "Editar", edit_pilot_path(pilot) %>
 			<%= link_to "Eliminar", pilot_path(pilot), method: :delete, data: {confirm: "Estas seguro?"} %>
-
-
+			<%= link_to "Detalles", pilot_path(pilot) %>
 		</li>
-</ol>
 
 	<% end %>
+</ol>

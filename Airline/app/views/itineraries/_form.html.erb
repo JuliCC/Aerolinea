@@ -26,6 +26,11 @@
 	</div>
 
 	<div>
+	<%= f.label :pilots %>
+	<%= f.collection_check_boxes :pilot_ids, Pilot.all, :id, :nombre %>
+	</div>
+
+	<div>
 		<%= f.submit "Save" %>	
 	</div>
 
