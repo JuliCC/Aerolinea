@@ -34,6 +34,10 @@ class ItinerariesController < ApplicationController
         redirect_to itineraries_path
     end
 
+  def ticket
+    @itinerary = Itinerary.all
+  end
+
   def itinerary_params
         params.require(:itinerary).permit(:ciudad_salida, :ciudad_destino, :hora_salida, :hora_llegada, {aeroplane_ids: []}, {pilot_ids: []})
     end

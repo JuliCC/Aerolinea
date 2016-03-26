@@ -14,16 +14,23 @@
 	<%= @itinerary.hora_llegada %>
 </ol>
 
-<ul>
-	<li>Codigo del avion</li>
-	<% @itinerary.aeroplanes.each do |aeroplane| %>
-	<li><%=aeroplane.codigo %></li>
+<h2>Detalles de la aerolinea</h2>
+
+<ol>
+	<li>
+		Codigo del avion:
+		<% @itinerary.aeroplanes.each do |aeroplane| %>
+		<%=aeroplane.codigo %>
+	</li>
 	<% end %>
 	
-	<li>Nombre del piloto</li>
-	<% @itinerary.pilots.each do |pilot| %>
-	<li><%=pilot.nombre %></li>
+	<li>
+		Nombre del piloto:
+		<% @itinerary.pilots.each do |pilot| %>  <%=pilot.nombre %>
+	</li>
 	<% end %>
-</ul>
+</ol>
+
+<%= link_to "Comprar tiquete", ticket_path, data: {confirm: "Desea comprar un tiquete para este vuelo?"}, message: "Su compra ha sido satisfactoria" %>
 
 
